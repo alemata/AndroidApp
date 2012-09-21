@@ -2,7 +2,7 @@ package com.gcba.rest;
 
 import com.gcba.db.BolicheManager;
 import com.gcba.model.Boliche;
-import net.sf.json.util.JSONBuilder;
+import org.json.simple.JSONArray;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -36,8 +36,10 @@ public class Controller extends HttpServlet {
 
         List<Boliche> honduras = BolicheManager.getInstance().getBolichesByName("the");
 
+
+
         for (Boliche hondura : honduras) {
-            writer.write(hondura.toJson().toString());
+            writer.write(hondura.toJson().toJSONString());
         }
 
     }

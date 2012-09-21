@@ -20,7 +20,7 @@ public class BolichesLongRequest extends AsyncTask<Void, Void, String> {
     protected String doInBackground(Void... voids) {
         HttpClient httpClient = new DefaultHttpClient();
         HttpContext localContext = new BasicHttpContext();
-        HttpGet httpGet = new HttpGet("http://www.cheesejedi.com/rest_services/get_big_cheese.php?puzzle=1");
+        HttpGet httpGet = new HttpGet("http://192.168.125.146:8080/");
         String text = null;
         try {
             HttpResponse response = httpClient.execute(httpGet, localContext);

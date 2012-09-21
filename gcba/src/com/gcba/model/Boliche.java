@@ -1,6 +1,7 @@
 package com.gcba.model;
 
-import net.sf.json.JSONObject;
+
+import org.json.simple.JSONObject;
 
 import javax.persistence.*;
 import java.io.Serializable;
@@ -96,15 +97,15 @@ public class Boliche implements Serializable {
     }
 
     public JSONObject toJson() {
-
-        return new JSONObject()
-                .element("numeroRegistro", getNumeroRegistro().toString())
-                .element("nombre", getNombre())
-                .element("domicilioCalle", getDomicilioCalle())
-                .element("domicilioNumbero", getDomicilioNumbero())
-                .element("capacidad", getCapacidad())
-                .element("numeroExpediente", getNumeroExpediente())
-                .element("clase", getClase())
-                .element("estado", getEstado());
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("nombre", getNombre());
+        return jsonObject;
+//                .element("nombre", getNombre())
+//                .element("domicilioCalle", getDomicilioCalle())
+//                .element("domicilioNumbero", getDomicilioNumbero())
+//                .element("capacidad", getCapacidad())
+//                .element("numeroExpediente", getNumeroExpediente())
+//                .element("clase", getClase())
+//                .element("estado", getEstado());
     }
 }
