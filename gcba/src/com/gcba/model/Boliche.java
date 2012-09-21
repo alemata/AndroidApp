@@ -3,14 +3,6 @@ package com.gcba.model;
 import javax.persistence.*;
 import java.io.Serializable;
 
-/**
- * Created by IntelliJ IDEA.
- * User: alejandro
- * Date: 9/19/12
- * Time: 10:30 AM
- * To change this template use File | Settings | File Templates.
- */
-
 
 @Entity
 @Table(name = "boliches")

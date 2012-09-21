@@ -7,16 +7,10 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by IntelliJ IDEA.
- * User: alejandro
- * Date: 9/19/12
- * Time: 1:08 PM
- * To change this template use File | Settings | File Templates.
- */
+
 public class CSVManager {
 
-    private static final String TMP_FILE = "/tmp/tmp.csv";
+    private static final String TMP_FILE = "/home/alemata/PruebasAndroid/AndroidApp/gcba/resources/fileFormatted.csv";
 
     public List<Boliche> processCSV(File sourceFile){
         File tmp = new File(TMP_FILE);

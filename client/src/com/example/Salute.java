@@ -20,8 +20,13 @@ public class Salute extends ListActivity {
 
 //        setContentView(R.layout.salute);
         BolicheEntryAdapter bolicheEntryAdapter = new BolicheEntryAdapter(this, R.layout.boliche_entry_list);
-        bolicheEntryAdapter.add(new Boliche("Honduras","Boliche en Palermo","Honduras 3550"));
-        bolicheEntryAdapter.add(new Boliche("Kika","Boliche en Palermo", "Fitz Roy 2367"));
+        for (int i = 0; i < 25; i++) {
+            bolicheEntryAdapter.add(new Boliche("Honduras","Boliche en Palermo","Honduras 3550"));
+            bolicheEntryAdapter.add(new Boliche("Kika","Boliche en Palermo", "Fitz Roy 2367"));
+        }
+
+        BolichesLongRequest bolichesLongRequest = new BolichesLongRequest();
+        bolichesLongRequest.execute();
 
 
         setListAdapter(bolicheEntryAdapter);

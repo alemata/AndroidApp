@@ -11,16 +11,10 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 
-/**
- * Created by IntelliJ IDEA.
- * User: alejandro
- * Date: 9/19/12
- * Time: 11:38 AM
- * To change this template use File | Settings | File Templates.
- */
+
 public class DBManager {
 
-    public static final String CONFIG_FILENAME = "/home/alejandro/IdeaProjects/gcba/src/com/gcba/db/hibernate.cfg.xml";
+    public static final String CONFIG_FILENAME = "/home/alemata/PruebasAndroid/AndroidApp/gcba/src/com/gcba/db/hibernate.cfg.xml";
     public static DBManager instance = null;
     private Session currentSession;
 

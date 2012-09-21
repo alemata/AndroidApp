@@ -10,13 +10,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.List;
 
-/**
- * Created by IntelliJ IDEA.
- * User: alejandro
- * Date: 9/19/12
- * Time: 12:06 PM
- * To change this template use File | Settings | File Templates.
- */
+
 public class Main {
 
 
@@ -40,10 +34,8 @@ public class Main {
         isr.close();
         */
 
-
-
         // Levanta todos los boliches del csv al disco
-        File data = new File("/home/alejandro/Desktop/registro-locales-bailables.csv");
+        File data = new File("/home/alemata/PruebasAndroid/AndroidApp/gcba/resources/registro-locales-bailables.csv");
         List<Boliche> boliches = new CSVManager().processCSV(data);
         for (Boliche boliche : boliches) {
             BolicheManager.getInstance().saveOrUpdate(boliche);
