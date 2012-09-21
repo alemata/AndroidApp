@@ -24,6 +24,7 @@ public class MyActivity extends Activity {
         bundle.putString("name", viewById.getText().toString());
         intent.putExtras(bundle);
         startActivity(intent);
+
         // Do something in response to button click
     }
 }
