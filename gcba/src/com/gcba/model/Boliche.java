@@ -1,5 +1,7 @@
 package com.gcba.model;
 
+import net.sf.json.JSONObject;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
@@ -8,7 +10,7 @@ import java.io.Serializable;
 @Table(name = "boliches")
 public class Boliche implements Serializable {
     @Id
-    @GeneratedValue(strategy= GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     private Integer numeroRegistro;
@@ -91,5 +93,18 @@ public class Boliche implements Serializable {
 
     public void setEstado(String estado) {
         this.estado = estado;
+    }
+
+    public JSONObject toJson() {
+
+        return new JSONObject()
+                .element("numeroRegistro", getNumeroRegistro().toString())
+                .element("nombre", getNombre())
+                .element("domicilioCalle", getDomicilioCalle())
+                .element("domicilioNumbero", getDomicilioNumbero())
+                .element("capacidad", getCapacidad())
+                .element("numeroExpediente", getNumeroExpediente())
+                .element("clase", getClase())
+                .element("estado", getEstado());
     }
 }
